@@ -1,5 +1,15 @@
+'use client'
+import { useEffect } from 'react'
+
 export default function Home() {
-  return (
-    <main className="min-h-screen"></main>
-  )
+	useEffect(() => {
+		(
+      async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default
+        const locomotiveScroll = new LocomotiveScroll()
+      }
+    )()
+	}, [])
+
+	return <main className='min-h-screen'></main>
 }
